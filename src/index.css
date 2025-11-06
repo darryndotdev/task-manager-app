@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --border-radius: 0.25rem;
+    --backlog: #6fa2f2;
+    --in-progress: #f3cc49;
+    --in-review: #b787f6;
+    --completed: #77db89;
+}
+
+:root[data-theme='dark'] {
+    --background-colour: rgb(19, 22.5, 30.5);
+    --colour: #c2c7d0;
+    --primary: #00b478;
+    --primary-hover: #00cc88;
+    --box-shadow: 0.0145rem 0.029rem 0.174rem rgba(7, 8.5, 12, 0.01698),
+        0.0335rem 0.067rem 0.402rem rgba(7, 8.5, 12, 0.024),
+        0.0625rem 0.125rem 0.75rem rgba(7, 8.5, 12, 0.03),
+        0.1125rem 0.225rem 1.35rem rgba(7, 8.5, 12, 0.036),
+        0.2085rem 0.417rem 2.502rem rgba(7, 8.5, 12, 0.04302),
+        0.5rem 1rem 6rem rgba(7, 8.5, 12, 0.06),
+        0 0 0 0.0625rem rgba(7, 8.5, 12, 0.015);
+    --pico-card-background-color: #181c25;
+    --h1-colour: #f0f1f3;
+    --h2-colour: #e0e3e7;
+    --h3-colour: #c2c7d0;
+    --h4-colour: #b3b9c5;
+    --h5-colour: #a4acba;
+    --h6-colour: #8891a4;
+}
+
+:root[data-theme='light'] {
+    --background-colour: #fff;
+    --colour: #373c44;
+    --primary: #007a50;
+    --primary-hover: #005f3d;
+    --box-shadow: 0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698),
+        0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.024),
+        0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.03),
+        0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.036),
+        0.2085rem 0.417rem 2.502rem rgba(129, 145, 181, 0.04302),
+        0.5rem 1rem 6rem rgba(129, 145, 181, 0.06),
+        0 0 0 0.0625rem rgba(129, 145, 181, 0.015);
+    --card-background-color: var(--background-color);
+    --h1-colour: #2d3138;
+    --h2-colour: #373c44;
+    --h3-colour: #424751;
+    --h4-colour: #4d535e;
+    --h5-colour: #5c6370;
+    --h6-colour: #646b79;
+}
+
+body {
+    background-color: var(--background-colour);
+    color: var(--colour);
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.125rem, 1.0964rem + 0.1524vw, 1.325rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1 {
+    color: var(--h1-colour);
+    font-size: clamp(2.5rem, 2.3571rem + 0.7619vw, 3.5rem);
+    line-height: 1;
+}
+h2 {
+    color: var(--h2-colour);
+    font-size: clamp(2rem, 1.8571rem + 0.7619vw, 3rem);
+    line-height: 1;
+}
+h3 {
+    color: var(--h3-colour);
+    font-size: clamp(1.5rem, 1.3929rem + 0.5714vw, 2.25rem);
+    line-height: 1;
+}
