@@ -1,0 +1,14 @@
+.form {
+    display: grid;
+    gap: 1rem;
+    margin: 8rem 0;
+    padding: 2.5rem 5rem;
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

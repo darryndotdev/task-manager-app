@@ -6,22 +6,28 @@ import Ticket from './components/Ticket/Ticket';
 import Form from './components/Form/Form';
 import Backlog from './pages/Backlog';
 import PageNotFound from './pages/PageNotFound';
+import Container from './UI/Container/Container';
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<Homepage />} />
-                <Route path='app' element={<AppLayout />}>
-                    <Route index element={<Navigate replace to='board' />} />
-                    <Route path='board' element={<Board />} />
-                    <Route path='ticket/:id' element={<Ticket />} />
-                    <Route path='form' element={<Form />} />
-                    <Route path='backlog' element={<Backlog />} />
-                </Route>
-                <Route path='*' element={<PageNotFound />} />
-            </Routes>
-        </BrowserRouter>
+        <Container>
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<Homepage />} />
+                    <Route path='app' element={<AppLayout />}>
+                        <Route
+                            index
+                            element={<Navigate replace to='board' />}
+                        />
+                        <Route path='board' element={<Board />} />
+                        <Route path='ticket/:id' element={<Ticket />} />
+                        <Route path='form' element={<Form />} />
+                        <Route path='backlog' element={<Backlog />} />
+                    </Route>
+                    <Route path='*' element={<PageNotFound />} />
+                </Routes>
+            </BrowserRouter>
+        </Container>
     );
 }
 

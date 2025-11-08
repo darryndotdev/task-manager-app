@@ -1,7 +1,12 @@
+import Login from '../components/Login/Login';
+import Centered from '../UI/Centered/Centered';
+
 function Homepage() {
     return (
         <>
-            <h1>Login</h1>
+            <Centered>
+                <Login />
+            </Centered>
         </>
     );
 }
