@@ -1,0 +1,8 @@
+.board {
+    padding: 1rem;
+    background-color: var(--card-background-colour);
+    box-shadow: var(--box-shadow);
+
+    border-radius: var(--border-radius);
+    flex: 1;
+}

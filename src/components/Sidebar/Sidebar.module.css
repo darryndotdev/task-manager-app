@@ -1,0 +1,11 @@
+.sidebar {
+    min-height: calc(100vh - 4rem);
+    flex-basis: 14rem;
+    background-color: var(--card-background-colour);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

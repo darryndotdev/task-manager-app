@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import AppLayout from './pages/AppLayout';
-import Board from './pages/Board';
+import Board from './components/Board/Board';
+import Backlog from './components/Backlog/Backlog';
 import Ticket from './components/Ticket/Ticket';
 import Form from './components/Form/Form';
-import Backlog from './pages/Backlog';
 import PageNotFound from './pages/PageNotFound';
 import Container from './UI/Container/Container';
 
@@ -20,9 +20,9 @@ function App() {
                             element={<Navigate replace to='board' />}
                         />
                         <Route path='board' element={<Board />} />
+                        <Route path='backlog' element={<Backlog />} />
                         <Route path='ticket/:id' element={<Ticket />} />
                         <Route path='form' element={<Form />} />
-                        <Route path='backlog' element={<Backlog />} />
                     </Route>
                     <Route path='*' element={<PageNotFound />} />
                 </Routes>

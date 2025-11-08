@@ -1,0 +1,6 @@
+.app {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+}

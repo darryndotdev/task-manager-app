@@ -1,0 +1,22 @@
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+}
+
+.nav a:link,
+.nav a:visited {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+    outline: 1px solid var(--primary);
+}
