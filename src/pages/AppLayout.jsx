@@ -24,17 +24,16 @@ function AppLayout() {
         }
     }, []);
 
-    function saveTasks(newTasks) {
-        setTasks(newTasks);
-        localStorage.setItem('tasks', JSON.stringify(newTasks));
-    }
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks]);
 
     function handleAddTasks(task) {
-        saveTasks([...tasks, task]);
+        setTasks([...tasks, task]);
     }
 
     function handleUpdateTasks(updatedTask) {
-        saveTasks(
+        setTasks(
             tasks.map((task) =>
                 task.id === updatedTask.id ? updatedTask : task
             )
@@ -42,7 +41,7 @@ function AppLayout() {
     }
 
     function handleDeleteTasks(id) {
-        saveTasks(tasks.filter((task) => task.id !== id));
+        setTasks(tasks.filter((task) => task.id !== id));
     }
 
     const appState = {
