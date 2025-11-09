@@ -4,20 +4,26 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import styles from './AppLayout.module.css';
 
 function AppLayout() {
+    console.log('Applayout rendering');
     const [tasks, setTasks] = useState([]);
 
     useEffect(function () {
         const stored = localStorage.getItem('tasks');
-        if (stored) {
+        const parsed = stored ? JSON.parse(stored) : null;
+
+        if (parsed && parsed.length > 0) {
             setTasks(JSON.parse(stored));
         } else {
             async function getData() {
                 try {
+                    console.log('Fetching tasks.json...');
                     const res = await fetch(`/data/tasks.json`);
+                    if (!res.ok) throw new Error(`HTTP error! ${res.status}`);
                     const data = await res.json();
+                    console.log('Fetched data:', data);
                     setTasks(data);
                 } catch (error) {
-                    console.log(error);
+                    console.error('Fetch error:', error);
                 }
             }
             getData();

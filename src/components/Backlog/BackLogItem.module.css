@@ -1,0 +1,24 @@
+.item {
+    background-color: var(--background-colour);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.item button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

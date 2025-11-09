@@ -10,5 +10,83 @@
         "title": "Set up routing",
         "description": "Add React Router with nested routes.",
         "status": "todo"
+    },
+    {
+        "id": "3",
+        "title": "Define task model",
+        "description": "Create Task interface and mock data structure.",
+        "status": "backlog"
+    },
+    {
+        "id": "4",
+        "title": "Implement drag and drop",
+        "description": "Use react-beautiful-dnd to move tasks between columns.",
+        "status": "todo"
+    },
+    {
+        "id": "5",
+        "title": "Add new task form",
+        "description": "Build form component for creating new tasks from board or backlog.",
+        "status": "backlog"
+    },
+    {
+        "id": "6",
+        "title": "Persist state",
+        "description": "Store task updates in localStorage or mock API.",
+        "status": "doing"
+    },
+    {
+        "id": "7",
+        "title": "Task detail view",
+        "description": "Display full task details at /app/ticket/:id with status updates.",
+        "status": "doing"
+    },
+    {
+        "id": "8",
+        "title": "Edit and delete tasks",
+        "description": "Add edit form and delete confirmation modal.",
+        "status": "todo"
+    },
+    {
+        "id": "9",
+        "title": "Reorder tasks within column",
+        "description": "Support drag-based reordering and persist order index.",
+        "status": "backlog"
+    },
+    {
+        "id": "10",
+        "title": "Improve UI styling",
+        "description": "Apply consistent styles using Tailwind or CSS Modules.",
+        "status": "done"
+    },
+    {
+        "id": "11",
+        "title": "Implement board filters",
+        "description": "Add search and status filters to the task board.",
+        "status": "backlog"
+    },
+    {
+        "id": "12",
+        "title": "Integrate mock API",
+        "description": "Fetch and update tasks from mock backend.",
+        "status": "doing"
+    },
+    {
+        "id": "13",
+        "title": "Set up project tooling",
+        "description": "Configure ESLint, Prettier, and TypeScript strict mode.",
+        "status": "done"
+    },
+    {
+        "id": "14",
+        "title": "Add unit tests",
+        "description": "Create Jest tests for components and hooks.",
+        "status": "todo"
+    },
+    {
+        "id": "15",
+        "title": "Deploy demo app",
+        "description": "Host app on Vercel with CI/CD workflow.",
+        "status": "backlog"
     }
 ]
