@@ -1,9 +1,9 @@
-import styles from './BackLogItem.module.css';
+import styles from './BacklogItem.module.css';
 import Bookmark from '../../UI/Icons/Bookmark';
 import Bin from '../../UI/Icons/Bin';
 import { useOutletContext } from 'react-router-dom';
 
-function BackLogItem({ task }) {
+function BacklogItem({ task }) {
     const { id, title } = task;
 
     const { handleDeleteTasks } = useOutletContext();
@@ -24,4 +24,4 @@ function BackLogItem({ task }) {
     );
 }
 
-export default BackLogItem;
+export default BacklogItem;
