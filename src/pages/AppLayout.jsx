@@ -4,7 +4,6 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import styles from './AppLayout.module.css';
 
 function AppLayout() {
-    console.log('Applayout rendering');
     const [tasks, setTasks] = useState([]);
 
     useEffect(function () {
@@ -16,14 +15,11 @@ function AppLayout() {
         } else {
             async function getData() {
                 try {
-                    console.log('Fetching tasks.json...');
                     const res = await fetch(`/data/tasks.json`);
-                    if (!res.ok) throw new Error(`HTTP error! ${res.status}`);
                     const data = await res.json();
-                    console.log('Fetched data:', data);
                     setTasks(data);
                 } catch (error) {
-                    console.error('Fetch error:', error);
+                    console.error(error);
                 }
             }
             getData();

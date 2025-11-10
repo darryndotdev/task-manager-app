@@ -5,8 +5,6 @@ import BackLogItem from './BackLogItem';
 function Backlog() {
     const { tasks } = useOutletContext();
 
-    console.log(tasks);
-
     const backLogTasks = tasks.filter((task) => task.status === 'backlog');
 
     return (
