@@ -1,12 +1,4 @@
-.backlog {
-    padding: 1rem;
-    background-color: var(--card-background-colour);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    flex: 1;
-}
-
-.backlog ul {
+.list {
     display: flex;
     flex-direction: column;
     gap: 1rem;

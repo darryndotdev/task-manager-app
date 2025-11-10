@@ -1,10 +1,10 @@
-import styles from './Board.module.css';
+import BoardLayout from '../../UI/BoadLayout/BoardLayout';
 
 function Board() {
     return (
-        <div className={styles.board}>
+        <BoardLayout>
             <h1>Board</h1>
-        </div>
+        </BoardLayout>
     );
 }
 

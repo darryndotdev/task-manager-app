@@ -1,5 +1,6 @@
 import styles from './Backlog.module.css';
 import { useOutletContext } from 'react-router-dom';
+import BoardLayout from '../../UI/BoadLayout/BoardLayout';
 import BacklogItem from './BackLogItem';
 
 function Backlog() {
@@ -8,14 +9,14 @@ function Backlog() {
     const backLogTasks = tasks.filter((task) => task.status === 'backlog');
 
     return (
-        <div className={styles.backlog}>
+        <BoardLayout>
             <h1>Backlog</h1>
-            <ul>
+            <ul className={styles.list}>
                 {backLogTasks.map((task) => (
                     <BacklogItem task={task} key={task.id} />
                 ))}
             </ul>
-        </div>
+        </BoardLayout>
     );
 }
 

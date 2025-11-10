@@ -22,7 +22,7 @@ function App() {
                         <Route path='board' element={<Board />} />
                         <Route path='backlog' element={<Backlog />} />
                         <Route path='ticket/:id' element={<Ticket />} />
-                        <Route path='form' element={<Form />} />
+                        <Route path='new' element={<Form />} />
                     </Route>
                     <Route path='*' element={<PageNotFound />} />
                 </Routes>
