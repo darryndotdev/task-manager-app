@@ -28,6 +28,10 @@ function Form() {
         };
         handleAddTasks(newData);
         navigate(-1);
+
+        setStatus('');
+        setTitle('');
+        setDescription('');
     }
 
     return (
