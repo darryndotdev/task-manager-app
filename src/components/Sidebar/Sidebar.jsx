@@ -11,7 +11,7 @@ function Sidebar() {
         <div className={styles.sidebar}>
             <div className={styles.container}>
                 <Nav />
-                <Button onClick={() => navigate('new')} type='primary'>
+                <Button onClick={() => navigate('new')} variant='primary'>
                     <Add />
                     Create task
                 </Button>
