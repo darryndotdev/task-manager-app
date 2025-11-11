@@ -1,4 +1,4 @@
-import BoardLayout from '../../UI/BoadLayout/BoardLayout';
+import BoardLayout from '../../UI/BoardLayout/BoardLayout';
 
 function Board() {
     return (

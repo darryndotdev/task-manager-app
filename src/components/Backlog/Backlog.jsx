@@ -1,6 +1,6 @@
 import styles from './Backlog.module.css';
 import { useOutletContext } from 'react-router-dom';
-import BoardLayout from '../../UI/BoadLayout/BoardLayout';
+import BoardLayout from '../../UI/BoardLayout/BoardLayout';
 import BacklogItem from './BackLogItem';
 
 function Backlog() {

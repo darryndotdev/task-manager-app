@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import styles from './Form.module.css';
-import BoardLayout from '../../UI/BoadLayout/BoardLayout';
+import BoardLayout from '../../UI/BoardLayout/BoardLayout';
 import Button from '../../components/Button/Button';
 
 function Form() {
