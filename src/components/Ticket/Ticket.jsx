@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, useOutletContext } from 'react-router-dom';
 import styles from './Ticket.module.css';
-import BoardLayout from '../../UI/BoardLayout/BoardLayout';
 import Button from '../../components/Button/Button';
+import Bookmark from '../../UI/Icons/Bookmark';
 
 function Ticket() {
     const navigate = useNavigate();
@@ -46,29 +46,9 @@ function Ticket() {
     }
 
     return (
-        <BoardLayout>
-            <form className={styles.form} onSubmit={handleSubmit}>
-                <div className={styles.row}>
-                    <label htmlFor='status' className='sr-only'>
-                        Status:
-                    </label>
-                    <select
-                        name='status'
-                        id='status'
-                        value={status}
-                        onChange={(e) => setStatus(e.target.value)}
-                        required
-                    >
-                        <option value='' disabled>
-                            -- Choose an option --
-                        </option>
-                        <option value='backlog'>Backlog</option>
-                        <option value='todo'>To do</option>
-                        <option value='doing'>Doing</option>
-                        <option value='done'>Done</option>
-                    </select>
-                </div>
-                <div className={styles.column}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.content}>
+                <div>
                     <label htmlFor='title' className='sr-only'>
                         Title:
                     </label>
@@ -79,9 +59,10 @@ function Ticket() {
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
+                        className='h2'
                     />
                 </div>
-                <div className={styles.column}>
+                <div>
                     <label htmlFor='description' className='sr-only'>
                         Description:
                     </label>
@@ -104,8 +85,32 @@ function Ticket() {
                         Back
                     </Button>
                 </div>
-            </form>
-        </BoardLayout>
+            </div>
+            <div className={styles.content}>
+                <p className={styles.ticket}>
+                    <Bookmark />
+                    {id}
+                </p>
+                <label htmlFor='status' className='sr-only'>
+                    Status:
+                </label>
+                <select
+                    name='status'
+                    id='status'
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                    required
+                >
+                    <option value='' disabled>
+                        -- Choose an option --
+                    </option>
+                    <option value='backlog'>Backlog</option>
+                    <option value='todo'>To do</option>
+                    <option value='doing'>Doing</option>
+                    <option value='done'>Done</option>
+                </select>
+            </div>
+        </form>
     );
 }
 

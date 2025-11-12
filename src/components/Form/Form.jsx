@@ -15,10 +15,11 @@ function Form() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        const id = `T-${Math.random()
-            .toString(36)
-            .substring(2, 5)
-            .toUpperCase()}`;
+        const id = `${Array.from({ length: 2 }, () =>
+            String.fromCharCode((65 + Math.random() * 26) | 0)
+        ).join('')}-${((Math.random() * 1000) | 0)
+            .toString()
+            .padStart(3, '0')}`;
 
         const newData = {
             id,
