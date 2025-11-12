@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import styles from './Form.module.css';
+import styles from './AddTask.module.css';
 import BoardLayout from '../../UI/BoardLayout/BoardLayout';
-import Button from '../../components/Button/Button';
+import Button from '../Button/Button';
 
-function Form() {
+function AddTask() {
     const navigate = useNavigate();
     const { handleAddTasks } = useOutletContext();
 
@@ -93,4 +93,4 @@ function Form() {
     );
 }
 
-export default Form;
+export default AddTask;

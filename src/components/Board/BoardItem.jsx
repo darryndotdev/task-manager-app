@@ -4,7 +4,6 @@ import Bookmark from '../../UI/Icons/Bookmark';
 import styles from './BoardItem.module.css';
 
 function BoardItem({ task, index }) {
-    console.log(task);
     return (
         <Draggable draggableId={task.id} index={index}>
             {(provided, snapshot) => (

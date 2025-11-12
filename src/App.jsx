@@ -4,7 +4,7 @@ import AppLayout from './pages/AppLayout';
 import Board from './components/Board/Board';
 import Backlog from './components/Backlog/Backlog';
 import Ticket from './components/Ticket/Ticket';
-import Form from './components/Form/Form';
+import AddTask from './components/AddTask/AddTask';
 import PageNotFound from './pages/PageNotFound';
 import Container from './UI/Container/Container';
 
@@ -22,7 +22,7 @@ function App() {
                         <Route path='board' element={<Board />} />
                         <Route path='backlog' element={<Backlog />} />
                         <Route path='ticket/:id' element={<Ticket />} />
-                        <Route path='new' element={<Form />} />
+                        <Route path='new' element={<AddTask />} />
                     </Route>
                     <Route path='*' element={<PageNotFound />} />
                 </Routes>

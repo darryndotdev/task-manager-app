@@ -1,4 +1,6 @@
 .board {
+    flex: 1;
+
     display: flex;
     gap: 1rem;
 }
