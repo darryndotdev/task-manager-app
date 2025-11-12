@@ -1,0 +1,9 @@
+.column {
+    flex: 1;
+    background-color: var(--background-colour);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.list {
+}

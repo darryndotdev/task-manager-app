@@ -1,8 +1,36 @@
-function Column() {
+import { Droppable } from '@hello-pangea/dnd';
+import BoardItem from './BoardItem';
+import styles from './Column.module.css';
+
+function Column({ status, tasks }) {
+    const titles = {
+        todo: 'To Do',
+        doing: 'Doing',
+        done: 'Done',
+    };
+
     return (
-        <>
-            <p>Column</p>
-        </>
+        <div className={styles.column}>
+            <h2>{titles[status]}</h2>
+            <Droppable droppableId={status}>
+                {(provided) => (
+                    <ul
+                        className={styles.list}
+                        {...provided.droppableProps}
+                        ref={provided.innerRef}
+                    >
+                        {tasks.map((task, index) => (
+                            <BoardItem
+                                key={task.id}
+                                task={task}
+                                index={index}
+                            />
+                        ))}
+                        {provided.placeholder}
+                    </ul>
+                )}
+            </Droppable>
+        </div>
     );
 }
 
