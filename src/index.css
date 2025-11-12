@@ -92,6 +92,12 @@ h3 {
     font-size: clamp(1.5rem, 1.3929rem + 0.5714vw, 2.25rem);
     line-height: 1;
 }
+h4,
+.h4 {
+    color: var(--h4-colour);
+    font-size: clamp(1.25rem, 1.1786rem + 0.381vw, 1.625rem);
+    line-height: 1;
+}
 
 .cta:link,
 .cta:visited {
