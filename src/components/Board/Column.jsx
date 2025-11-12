@@ -4,7 +4,7 @@ import styles from './Column.module.css';
 
 function Column({ status, tasks }) {
     const titles = {
-        todo: 'To Do',
+        todo: 'To do',
         doing: 'Doing',
         done: 'Done',
     };
@@ -22,6 +22,7 @@ function Column({ status, tasks }) {
                         {tasks.map((task, index) => (
                             <BoardItem
                                 key={task.id}
+                                id={task.id}
                                 task={task}
                                 index={index}
                             />

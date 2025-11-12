@@ -25,7 +25,7 @@ function BacklogItem({ task }) {
                         handleDeleteTasks(id);
                     }}
                 >
-                    <Bin />
+                    <Bin fill='var(--colour)' />
                 </button>
             </Link>
         </li>

@@ -1,9 +1,13 @@
 import { Draggable } from '@hello-pangea/dnd';
+import { useOutletContext } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Bookmark from '../../UI/Icons/Bookmark';
 import styles from './BoardItem.module.css';
+import Bookmark from '../../UI/Icons/Bookmark';
+import Bin from '../../UI/Icons/Bin';
 
-function BoardItem({ task, index }) {
+function BoardItem({ task, index, id }) {
+    const { handleDeleteTasks } = useOutletContext();
+
     return (
         <Draggable draggableId={task.id} index={index}>
             {(provided, snapshot) => (
@@ -21,8 +25,19 @@ function BoardItem({ task, index }) {
                             <p>{task.description}</p>
                         </div>
                         <div className={styles.ticket}>
-                            <Bookmark />
-                            {task.id}
+                            <div className={styles.bookmark}>
+                                <Bookmark />
+                                {task.id}
+                            </div>
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleDeleteTasks(id);
+                                }}
+                            >
+                                <Bin fill='var(--colour)' />
+                            </button>
                         </div>
                     </li>
                 </Link>

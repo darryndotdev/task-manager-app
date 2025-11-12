@@ -20,5 +20,17 @@
 .ticket {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.ticket button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bookmark {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }

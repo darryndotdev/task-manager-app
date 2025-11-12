@@ -6,6 +6,7 @@
     --in-progress: #f3cc49;
     --in-review: #b787f6;
     --completed: #77db89;
+    --danger: #e04f5f;
 }
 
 :root[data-theme='dark'] {

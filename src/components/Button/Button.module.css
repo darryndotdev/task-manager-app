@@ -17,5 +17,12 @@
 
 .outline {
     outline: 1px solid var(--primary);
+    color: var(--primary);
+    background: none;
+}
+
+.danger {
+    outline: 1px solid var(--danger);
+    color: var(--danger);
     background: none;
 }

@@ -18,7 +18,7 @@ function Sidebar() {
             <div className={styles.container}>
                 <Nav />
                 <Button onClick={handleNavigation} variant='primary'>
-                    <Add />
+                    <Add fill='#fff' />
                     Create task
                 </Button>
             </div>

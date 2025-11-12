@@ -3,11 +3,13 @@ import { useNavigate, useParams, useOutletContext } from 'react-router-dom';
 import styles from './Ticket.module.css';
 import Button from '../../components/Button/Button';
 import Bookmark from '../../UI/Icons/Bookmark';
+import Bin from '../../UI/Icons/Bin';
 
 function Ticket() {
     const navigate = useNavigate();
+
     const { id } = useParams();
-    const { handleUpdateTasks } = useOutletContext();
+    const { handleUpdateTasks, handleDeleteTasks } = useOutletContext();
 
     const [status, setStatus] = useState('');
     const [title, setTitle] = useState('');
@@ -109,6 +111,16 @@ function Ticket() {
                     <option value='doing'>Doing</option>
                     <option value='done'>Done</option>
                 </select>
+                <Button
+                    variant='danger'
+                    onClick={() => {
+                        navigate(-1);
+                        handleDeleteTasks(id);
+                    }}
+                >
+                    <Bin fill='var(--danger)' />
+                    Delete
+                </Button>
             </div>
         </form>
     );
