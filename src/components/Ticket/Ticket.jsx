@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams, useOutletContext } from 'react-router-dom';
+import {
+    useNavigate,
+    useParams,
+    useOutletContext,
+    useLocation,
+} from 'react-router-dom';
 import styles from './Ticket.module.css';
 import Button from '../../components/Button/Button';
 import Bookmark from '../../UI/Icons/Bookmark';
@@ -7,6 +12,7 @@ import Bin from '../../UI/Icons/Bin';
 
 function Ticket() {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const { id } = useParams();
     const { handleUpdateTasks, handleDeleteTasks } = useOutletContext();
@@ -15,6 +21,8 @@ function Ticket() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [taskId, setTaskId] = useState('');
+
+    const from = location.state?.from || '/app/board';
 
     useEffect(() => {
         const stored = localStorage.getItem('tasks');
@@ -44,7 +52,7 @@ function Ticket() {
         };
 
         handleUpdateTasks(updatedTask);
-        navigate('/app/backlog');
+        navigate(from);
     }
 
     return (

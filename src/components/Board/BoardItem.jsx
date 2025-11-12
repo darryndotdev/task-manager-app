@@ -11,7 +11,10 @@ function BoardItem({ task, index, id }) {
     return (
         <Draggable draggableId={task.id} index={index}>
             {(provided, snapshot) => (
-                <Link to={`/app/ticket/${task.id}`}>
+                <Link
+                    to={`/app/ticket/${task.id}`}
+                    state={{ from: '/app/board' }}
+                >
                     <li
                         ref={provided.innerRef}
                         {...provided.draggableProps}

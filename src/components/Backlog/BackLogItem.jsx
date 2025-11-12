@@ -10,7 +10,11 @@ function BacklogItem({ task }) {
 
     return (
         <li>
-            <Link className={styles.item} to={`/app/ticket/${id}`}>
+            <Link
+                className={styles.item}
+                to={`/app/ticket/${id}`}
+                state={{ from: '/app/backlog' }}
+            >
                 <div className={styles.content}>
                     <Bookmark />
                     <p>
