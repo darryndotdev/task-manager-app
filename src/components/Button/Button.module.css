@@ -12,6 +12,7 @@
 
 .primary {
     background-color: var(--primary);
+    color: #fff;
 }
 
 .outline {
