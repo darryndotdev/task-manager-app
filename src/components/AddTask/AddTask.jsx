@@ -1,16 +1,19 @@
 import { useState } from 'react';
-import { useNavigate, useOutletContext } from 'react-router-dom';
+import { useNavigate, useOutletContext, useLocation } from 'react-router-dom';
 import styles from './AddTask.module.css';
 import BoardLayout from '../../UI/BoardLayout/BoardLayout';
 import Button from '../Button/Button';
 
 function AddTask() {
     const navigate = useNavigate();
+    const location = useLocation();
     const { handleAddTasks } = useOutletContext();
 
     const [status, setStatus] = useState('');
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+
+    const from = location.state?.from || '/board';
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -28,7 +31,7 @@ function AddTask() {
             status,
         };
         handleAddTasks(newData);
-        navigate(-1);
+        navigate(from);
 
         setStatus('');
         setTitle('');
