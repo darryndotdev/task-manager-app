@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import AppLayout from './pages/AppLayout';
 import Board from './components/Board/Board';
@@ -11,7 +11,7 @@ import Container from './UI/Container/Container';
 function App() {
     return (
         <Container>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route index element={<Homepage />} />
                     <Route path='app' element={<AppLayout />}>
@@ -26,7 +26,7 @@ function App() {
                     </Route>
                     <Route path='*' element={<PageNotFound />} />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </Container>
     );
 }
