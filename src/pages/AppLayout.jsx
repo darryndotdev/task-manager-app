@@ -15,7 +15,9 @@ function AppLayout() {
         } else {
             async function getData() {
                 try {
-                    const res = await fetch(`/data/tasks.json`);
+                    const res = await fetch(
+                        `${import.meta.env.BASE_URL}data/tasks.json`
+                    );
                     const data = await res.json();
                     setTasks(data);
                 } catch (error) {
